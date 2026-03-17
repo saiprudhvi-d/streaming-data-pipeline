@@ -1,0 +1,10 @@
+kafka:
+  bootstrap_servers: localhost:9092
+  topic: transactions
+  group_id: stream-consumer-group
+processing:
+  window_size_seconds: 5
+  anomaly_threshold_sigma: 3.0
+output:
+  sink_path: data/output/
+  dead_letter_path: data/dead_letter/
